@@ -3,14 +3,11 @@ import Timestamp from './Timestamp';
 
 const TimelineEvent = ({person, status, timestamp}) => {
     return (
-        <ul>
-            <li>Person: {person}
-                <ul>
-                    <li>{status}</li>
-                    <li><Timestamp time={timestamp}></Timestamp></li>
-                </ul>
-            </li>
-        </ul>
+        <div className="timeline-event">
+            <p className="event-person">{person}</p>
+            <p className="event-status">{status}</p>
+            <Timestamp time={timestamp}></Timestamp>
+        </div>
     )
 };
 
